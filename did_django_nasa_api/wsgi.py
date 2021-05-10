@@ -14,3 +14,4 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'did_django_nasa_api.settings')
 
 application = get_wsgi_application()
+#65247
