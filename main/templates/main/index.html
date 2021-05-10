@@ -1,0 +1,51 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block extend_head %}
+
+{% endblock %}
+
+{% block extend_nav %} 
+
+<ul class="sidenav">
+  <li><a class="active" href="javascript:void(0)">Home</a></li>
+  <li><a href="{% url 'main:results' %}">Results</a></li>
+</ul>
+
+{% endblock %}
+
+
+{% block content %}
+
+<h3 id="map">Django Spoontacular API Demo - Home</h3>
+
+<div class="container">
+
+	<form id="apiform" method="POST" action="/">
+    {% csrf_token %}
+
+    	<label for="username">Select category</label>
+    	<select name="cat" id="cat">
+    		<option selected value="">Select one</option>
+		  	<option value="apod">Astronomy Picture of the Day (APOD)</option>
+		  	<option value="mars">Mars Rover Photos</option>
+		  	<option value="epic">Earth Polychromatic Imaging Camera (EPIC)</option>
+		</select>
+	   
+
+	   <button type="submit">Submit</button>
+	</form>
+
+
+</div>
+
+
+{% endblock %}
+
+{% block extend_footer %}
+
+
+
+
+{% endblock %}
